@@ -1,9 +1,16 @@
 import React from "react";
-import { Box, Button, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 import vector from "../../assets/svg/vectors/vector-home.svg";
 import arrow from "../../assets/svg/icons/arrowOutward.svg";
 import { useNavigate } from "react-router-dom";
-import Projects from "../../components/Projects"
+import Projects from "../../components/Projects";
 
 export default function index() {
   const navigate = useNavigate();
@@ -21,7 +28,7 @@ export default function index() {
       />
       <Flex
         direction="column"
-        px={{base: "42px", sm:"80px"}}
+        px={{ base: "42px", sm: "80px" }}
         justifyContent="center"
         w={{ base: "100%", md: "60%" }}
         minH="80vh"
@@ -70,8 +77,6 @@ export default function index() {
             </Button>
           </Link>
         </div>
-        
-      
       </Flex>
       <Projects />
     </>
