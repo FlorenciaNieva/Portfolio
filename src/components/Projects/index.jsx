@@ -6,7 +6,7 @@ import db from "../../../firestore.config";
 import SafePaws from "../../assets/img/SafePaws.webp";
 import MovieApp from "../../assets/img/MovieApp.webp";
 import Carrers from "../../assets/img/Carrers.webp";
-import AhorrADAS from "../../assets/img/AhorrAdas.webp";
+import AhorrAdas from "../../assets/img/AhorrAdas.webp";
 import MemeGenerator from "../../assets/img/MemeGenerate.webp";
 
 const imageMap = {
@@ -14,7 +14,7 @@ const imageMap = {
   MovieApp,
   Carrers,
   MemeGenerator,
-  AhorrADAS,
+  AhorrAdas,
 };
 
 export default function index() {
