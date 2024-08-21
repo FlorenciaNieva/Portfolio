@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Error from "./pages/Error/index.jsx";
 import Home from "./pages/Home/index.jsx";
+import DetailsProject from "./components/Projects/DetailsProject"
 import AboutMe from "./pages/AboutMe/index.jsx";
 import Contact from "./pages/Contact/index.jsx";
 import Footer from "./components/Footer";
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Error />} />
           <Route path="/" element={<Home />} />
+          <Route path="/project/:id" element={<DetailsProject />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
