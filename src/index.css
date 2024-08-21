@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('./assets/fonts/satoshi/Satoshi-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi-Light';
+  src: url('./assets/fonts/satoshi/Satoshi-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi-Italic';
+  src: url('./assets/fonts/satoshi/Satoshi-Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('./assets/fonts/satoshi/Satoshi-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi-MediumItalic';
+  src: url('./assets/fonts/satoshi/Satoshi-MediumItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('./assets/fonts/satoshi/Satoshi-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi-BoldItalic';
+  src: url('./assets/fonts/satoshi/Satoshi-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cabinet-Regular';
+  src: url('./assets/fonts/cabinet/CabinetGrotesk-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cabinet-Light';
+  src: url('./assets/fonts/cabinet/CabinetGrotesk-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cabinet-Medium';
+  src: url('./assets/fonts/cabinet/CabinetGrotesk-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cabinet-ExtraBold';
+  src: url('./assets/fonts/cabinet/CabinetGrotesk-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cabinet-Bold';
+  src: url('./assets/fonts/cabinet/CabinetGrotesk-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cabinet-Thin';
+  src: url('./assets/fonts/cabinet/CabinetGrotesk-Thin.otf') format('opentype');
+}
