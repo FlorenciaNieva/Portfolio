@@ -14,7 +14,7 @@ const theme = extendTheme({
     heading: "Cabinet-Bold",
   },
   colors: {
-    white: "#FCFCFD",
+    white: "#FaF8F8",
     black: "#1E1F24",
     primery: {
       100: "#F5EEF7",
@@ -28,7 +28,7 @@ const theme = extendTheme({
       900: "#341F3C",
     },
     neutral: {
-      100: "#F9F9FB",
+      100: "#F6F4F4",
       200: "#EFF0F3",
       300: "#E7E8EC",
       400: "#E0E1E6",
