@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../../firestore.config";
@@ -33,12 +33,12 @@ export default function index() {
         setData(documents);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching data from Firestore:", error);
+        console.error("Error fetching data from Firestore:", error.menssage);
       }
     };
     fetchData();
   }, []);
-  console.log(data)
+  console.log(data);
 
   return (
     <Flex
@@ -50,12 +50,18 @@ export default function index() {
       pos="relative"
     >
       <Heading mb={20}>Mis Proyectos</Heading>
-      <Flex justify="center" align="stretch"gap={20} wrap="wrap">
+      <Flex justify="center" align="stretch" gap={20} wrap="wrap">
         {loading ? (
           <div>cargando ...</div>
         ) : (
           data.map((info, index) => (
-            <Card key={info.id} id={info.id} img={imageMap[info?.title]} title={info?.title} summary={info?.summary} />
+            <Card
+              key={info?.id}
+              id={info?.id}
+              img={imageMap[info?.title]}
+              title={info?.title}
+              summary={info?.summary}
+            />
           ))
         )}
       </Flex>
