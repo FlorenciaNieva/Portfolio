@@ -45,7 +45,9 @@ export default function index() {
           habilidades para crear soluciones tecnológicas que cambien la vida
           diaria de las personas.
         </Text>
-        <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
+        <div>
+          <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
+        </div>
       </Flex>
       <Projects />
     </>
