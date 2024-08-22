@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 import vector from "../../assets/svg/vectors/vector-home.svg";
-import arrow from "../../assets/svg/icons/arrowOutward.svg";
-import { useNavigate } from "react-router-dom";
 import Projects from "../../components/Projects";
+import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button";
 
 export default function index() {
   const navigate = useNavigate();
@@ -54,29 +47,7 @@ export default function index() {
           habilidades para crear soluciones tecnológicas que cambien la vida
           diaria de las personas.
         </Text>
-        <div>
-          <Link onClick={() => navigate("/about-me")}>
-            <Button
-              mt={6}
-              bg="black"
-              color="white"
-              borderRadius="8px"
-              padding="6px"
-              fontSize="md"
-              fontFamily="Satoshi-Light"
-              _hover={{ backgroundColor: "black", color: "white" }}
-            >
-              SOBRE MÍ
-              <Image
-                pl={2}
-                src={arrow}
-                alt="Icono de flecha"
-                aria-label="Icono de flecha"
-                title="Flecha"
-              />
-            </Button>
-          </Link>
-        </div>
+        <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
       </Flex>
       <Projects />
     </>
