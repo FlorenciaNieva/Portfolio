@@ -16,7 +16,7 @@ const theme = extendTheme({
   colors: {
     white: "#FaF8F8",
     black: "#1E1F24",
-    primery: {
+    primary: {
       100: "#F5EEF7",
       200: "#EFE4F2",
       300: "#E0CEE6",

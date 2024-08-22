@@ -39,7 +39,7 @@ export default function index() {
           <DrawerCloseButton />
 
           <DrawerBody py={16}>
-            <Navbar direction="column" />
+            <Navbar direction="column" onClose={onClose} />
           </DrawerBody>
         </DrawerContent>
       </Drawer>
