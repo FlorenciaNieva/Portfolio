@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Flex, Heading, Image, Text } from "@chakra-ui/react";
 import vector from "../../assets/svg/vectors/vector-home.svg";
-import arrow from "../../assets/svg/icons/arrowOutward.svg";
-import { useNavigate } from "react-router-dom";
 import Projects from "../../components/Projects";
+import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button";
 
 export default function index() {
   const navigate = useNavigate();
@@ -35,14 +28,12 @@ export default function index() {
         pos="relative"
       >
         <Text fontSize="2xl">Hola, soy</Text>
-        <Flex gap={2}>
-          <Heading size="2xl" fontFamily="Cabinet-Bold">
-            Florencia
-          </Heading>
-          <Heading size="2xl" fontFamily="Satoshi-Italic">
+        <Heading size="2xl" fontFamily="Cabinet-Bold" lineHeight="1.2">
+          Florencia{" "}
+          <span style={{ fontFamily: "Megalona", fontSize: "48px" }}>
             Nieva
-          </Heading>
-        </Flex>
+          </span>
+        </Heading>
         <Text fontSize="xl" fontFamily="Satoshi-Bold">
           Desarrolladora Frontend y QA tester
         </Text>
@@ -55,27 +46,7 @@ export default function index() {
           diaria de las personas.
         </Text>
         <div>
-          <Link onClick={() => navigate("/about-me")}>
-            <Button
-              mt={6}
-              bg="black"
-              color="white"
-              borderRadius="8px"
-              padding="6px"
-              fontSize="md"
-              fontFamily="Satoshi-Light"
-              _hover={{ backgroundColor: "black", color: "white" }}
-            >
-              SOBRE MÍ
-              <Image
-                pl={2}
-                src={arrow}
-                alt="Icono de flecha"
-                aria-label="Icono de flecha"
-                title="Flecha"
-              />
-            </Button>
-          </Link>
+          <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
         </div>
       </Flex>
       <Projects />

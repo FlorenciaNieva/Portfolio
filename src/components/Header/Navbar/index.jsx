@@ -2,30 +2,33 @@ import React from "react";
 import { Link, Flex } from "@chakra-ui/react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-export default function index({ direction }) {
+export default function index({ direction, onClose }) {
   const navigate = useNavigate();
   let location = useLocation();
 
   const handleNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+
     if (location.pathname === "/") {
-      const sectionElement = document.getElementById(sectionId);
-      if (sectionElement) {
+      if (section) {
         window.scrollTo({
-          top: sectionElement.offsetTop,
+          top: section.offsetTop,
           behavior: "smooth",
         });
       }
+      onClose();
     } else {
       navigate("/");
       setTimeout(() => {
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
+        const section = document.getElementById(sectionId);
+        if (section) {
           window.scrollTo({
-            top: sectionElement.offsetTop,
+            top: section.offsetTop,
             behavior: "smooth",
           });
         }
-      }, 100);
+        onClose();
+      }, 500);
     }
   };
 
@@ -33,9 +36,13 @@ export default function index({ direction }) {
     <nav>
       <Flex direction={direction} align="center" gap={10}>
         <Link
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            onClose();
+          }}
           fontFamily="Satoshi-Bold"
           zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none" }}
         >
           INICIO
         </Link>
@@ -43,16 +50,29 @@ export default function index({ direction }) {
           onClick={() => handleNavigation("projects")}
           fontFamily="Satoshi-Bold"
           zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none" }}
         >
           PROYECTOS
         </Link>
-        <Link onClick={() => navigate("/about-me")} fontFamily="Satoshi-Bold" zIndex="overlay">
+        <Link
+          onClick={() => {
+            navigate("/about-me");
+            onClose();
+          }}
+          fontFamily="Satoshi-Bold"
+          zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none" }}
+        >
           SOBRE MÍ
         </Link>
         <Link
-          onClick={() => navigate("/contact")}
+          onClick={() => {
+            navigate("/contact");
+            onClose();
+          }}
           fontFamily="Satoshi-Bold"
           zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none" }}
         >
           CONTACTO
         </Link>

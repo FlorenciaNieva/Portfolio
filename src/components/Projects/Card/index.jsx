@@ -1,15 +1,13 @@
 import React from "react";
 import {
   Box,
-  Button,
   Flex,
   Heading,
   Image,
-  Link,
   Text,
 } from "@chakra-ui/react";
-import arrow from "../../../assets/svg/icons/arrowOutward.svg";
 import { useNavigate } from "react-router-dom";
+import Button from "../../../components/Button";
 
 export default function index({ id, img, title, summary }) {
   const navigate = useNavigate();
@@ -53,26 +51,7 @@ export default function index({ id, img, title, summary }) {
         {summary}
       </Text>
       <Flex alignSelf="end">
-        <Link onClick={() => navigate(`/project/${id}`)}>
-          <Button
-            bg="black"
-            color="white"
-            borderRadius="8px"
-            padding="6px"
-            fontSize="md"
-            fontFamily="Satoshi-Light"
-            _hover={{ backgroundColor: "black", color: "white" }}
-          >
-            VER MÁS
-            <Image
-              pl={2}
-              src={arrow}
-              alt="Icono de flecha"
-              aria-label="Icono de flecha"
-              title="Flecha"
-            />
-          </Button>
-        </Link>
+        <Button onClick={() => navigate(`/project/${id}`)} title="VER MÁS" />
       </Flex>
     </Flex>
   );
