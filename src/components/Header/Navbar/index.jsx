@@ -36,6 +36,7 @@ export default function index({ direction }) {
           onClick={() => navigate("/")}
           fontFamily="Satoshi-Bold"
           zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none"}}
         >
           INICIO
         </Link>
@@ -43,16 +44,23 @@ export default function index({ direction }) {
           onClick={() => handleNavigation("projects")}
           fontFamily="Satoshi-Bold"
           zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none"}}
         >
           PROYECTOS
         </Link>
-        <Link onClick={() => navigate("/about-me")} fontFamily="Satoshi-Bold" zIndex="overlay">
+        <Link
+          onClick={() => navigate("/about-me")}
+          fontFamily="Satoshi-Bold"
+          zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none"}}
+        >
           SOBRE MÍ
         </Link>
         <Link
           onClick={() => navigate("/contact")}
           fontFamily="Satoshi-Bold"
           zIndex="overlay"
+          _hover={{ color: "primary.500", textDecoration: "none"}}
         >
           CONTACTO
         </Link>
