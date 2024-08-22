@@ -28,14 +28,12 @@ export default function index() {
         pos="relative"
       >
         <Text fontSize="2xl">Hola, soy</Text>
-        <Flex gap={2}>
-          <Heading size="2xl" fontFamily="Cabinet-Bold">
-            Florencia
-          </Heading>
-          <Heading size="2xl" fontFamily="Satoshi-Italic">
+        <Heading size="2xl" fontFamily="Cabinet-Bold" lineHeight="1.2">
+          Florencia{" "}
+          <span style={{ fontFamily: "Megalona", fontSize: "48px" }}>
             Nieva
-          </Heading>
-        </Flex>
+          </span>
+        </Heading>
         <Text fontSize="xl" fontFamily="Satoshi-Bold">
           Desarrolladora Frontend y QA tester
         </Text>
