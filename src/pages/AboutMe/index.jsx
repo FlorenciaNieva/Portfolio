@@ -1,7 +1,69 @@
-import React from 'react'
+import React from "react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import profile from "../../assets/img/profile.webp";
+import vector from "../../assets/svg/vectors/vector-about-me.svg";
+import Accordion from "../../components/Accordion";
+import Skills from "../../components/Skills"
+import Button from "../../components/Button"
 
 export default function index() {
   return (
-    <div>About me</div>
-  )
+    <>
+      <Image
+        src={vector}
+        alt="vector de fondo"
+        pos="absolute"
+        top={0}
+        right={0}
+        zIndex={0}
+      />
+      <Flex px={{ base: "42px", sm: "80px" }} pos="relative" gap={20}>
+        <Flex direction="column" w="60vw" gap={5}>
+          <Image
+            src={profile}
+            alt="Imagen de perfil"
+            aria-label="Imagen de perfil"
+            w="100%"
+          />
+          <Accordion />
+        </Flex>
+        <Flex direction="column">
+          <Heading textAlign="center">Sobre mí</Heading>
+          <Box
+            p={6}
+            borderRadius={20}
+            shadow="0px 20px 40px 0px #0000001A"
+            backdropFilter="blur(5px)"
+          >
+            <Text>
+              Hola, me llamo Flor, tengo 19 años y me apasiona el desarrollo de
+              software. Completé mi bachillerato en Contabilidad y Gestión de
+              Empresas en 2022. En 2023, me enfoqué en el desarrollo Front-End y
+              realicé una capacitación intensiva de 400 horas en Ada ITW, que
+              incluyó trabajo colaborativo en entornos de desarrollo.
+              <br />
+              <br />
+              Posteriormente, participé en una simulación laboral en NoCountry
+              como desarrolladora Front-End, donde interactué con roles
+              interdisciplinarios y desarrollé mis habilidades blandas. Descubrí
+              mi interés por explorar diversas áreas tecnológicas.
+              <br />
+              <br />
+              Gracias a una beca de la Fundación Empujar, cursé el programa
+              Testing Máster en la UTN y lo completé en julio de 2024. En agosto
+              de 2024, comenzaré la tecnicatura en Tecnologías de la Información
+              en la UTN para seguir expandiendo mis conocimientos. Además,
+              estudio inglés en un instituto desde hace 2 años y mi nivel es
+              pre-intermedio.
+            </Text>
+          </Box>
+        </Flex>
+      </Flex>
+      <Flex justify="center" my={14}>
+        <Button title="DESCARGA MI CV" />
+      </Flex>
+      
+      <Skills />
+    </>
+  );
 }
