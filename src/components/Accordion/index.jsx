@@ -12,10 +12,10 @@ import plus from "../../assets/svg/icons/plus.svg";
 
 export default function index() {
   return (
-    <Accordion allowToggle>
+    <Accordion allowToggle w={{ base: "60vw", lg: "20vw" }}>
       <AccordionItem border="none">
         <h2>
-          <AccordionButton bg="primary.200" borderRadius={10} >
+          <AccordionButton bg="primary.200" borderRadius={10}>
             <Box as="span" flex="1" textAlign="left">
               <Heading as="h4" size="md">
                 Mis pasiones

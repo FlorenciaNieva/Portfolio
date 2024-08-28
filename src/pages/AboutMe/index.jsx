@@ -1,33 +1,55 @@
 import React from "react";
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import profile from "../../assets/img/profile.webp";
 import vector from "../../assets/svg/vectors/vector-about-me.svg";
 import Accordion from "../../components/Accordion";
-import Skills from "../../components/Skills"
-import Button from "../../components/Button"
+import Skills from "../../components/Skills";
+import Button from "../../components/Button";
 
 export default function index() {
+  const [isLg] = useMediaQuery("(min-width: 992px)");
+
   return (
     <>
       <Image
         src={vector}
         alt="vector de fondo"
         pos="absolute"
-        top={0}
+        top={{ base: 550, lg: 0 }}
         right={0}
         zIndex={0}
       />
-      <Flex px={{ base: "42px", sm: "80px" }} pos="relative" gap={20}>
-        <Flex direction="column" w="60vw" gap={5}>
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        px={{ base: "42px", sm: "80px" }}
+        justify="space-between"
+        align="center"
+        pos="relative"
+        gap={16}
+      >
+        <Flex
+          direction="column"
+          justify="center"
+          align="center"
+          w={{ base: "50vw", lg: "20vw" }}
+          gap={5}
+        >
           <Image
             src={profile}
             alt="Imagen de perfil"
             aria-label="Imagen de perfil"
             w="100%"
           />
-          <Accordion />
+          {isLg ? <Accordion /> : ""}
         </Flex>
-        <Flex direction="column">
+        <Flex direction="column" w={{ base: "60vw" }}>
           <Heading textAlign="center">Sobre mí</Heading>
           <Box
             p={6}
@@ -59,11 +81,13 @@ export default function index() {
           </Box>
         </Flex>
       </Flex>
-      <Flex justify="center" my={14}>
+      <Flex justify="center" my={16}>
         <Button title="DESCARGA MI CV" />
       </Flex>
-      
       <Skills />
+      <Flex justify="center" mt={20}>
+        {!isLg ? <Accordion /> : ""}
+      </Flex>
     </>
   );
 }
