@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, Spinner } from "@chakra-ui/react";
 import Card from "./Card";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../../firestore.config";
@@ -52,7 +52,15 @@ export default function index() {
       <Heading mb={20}>Mis Proyectos</Heading>
       <Flex justify="center" align="stretch" gap={20} wrap="wrap">
         {loading ? (
-          <div>cargando ...</div>
+          <div>
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              size="lg"
+              color="primary.700"
+            />
+          </div>
         ) : (
           data.map((info, index) => (
             <Card
