@@ -17,9 +17,9 @@ export default function index() {
         src={vector}
         alt="vector de fondo"
         pos="absolute"
-        top={48}
+        top={20}
         right={0}
-        zIndex={0}
+        zIndex={-1}
       />
       <Flex
         direction="column"
