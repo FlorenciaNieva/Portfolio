@@ -2,9 +2,9 @@ import React from "react";
 import { Button, Link, Image } from "@chakra-ui/react";
 import arrow from "../../assets/svg/icons/arrowOutward.svg";
 
-export default function index({ onClick, title }) {
+export default function index({ onClick, title, href }) {
   return (
-    <Link onClick={onClick}>
+    <Link onClick={onClick} href={href} target="_blank">
       <Button
         mt={6}
         bg="black"
