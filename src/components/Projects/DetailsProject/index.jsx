@@ -9,7 +9,7 @@ import MovieApp from "../../../assets/img/MovieApp.webp";
 import Carrers from "../../../assets/img/Carrers.webp";
 import AhorrAdas from "../../../assets/img/Ahorradas.webp";
 import MemeGenerator from "../../../assets/img/MemeGenerate.webp";
-import { LuGalleryHorizontal } from "react-icons/lu";
+import OtherProjects from "../OtherProjects"
 
 const imageMap = {
   SafePaws,
@@ -118,6 +118,7 @@ export default function index() {
           {data.tools}
         </Text>
       </Flex>
+      <OtherProjects id={data.id} />
     </>
   );
 }
