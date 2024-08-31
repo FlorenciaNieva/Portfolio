@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Flex,
@@ -12,9 +12,30 @@ import vector from "../../assets/svg/vectors/vector-about-me.svg";
 import Accordion from "../../components/Accordion";
 import Skills from "../../components/Skills";
 import Button from "../../components/Button";
+import { collection, getDocs } from "firebase/firestore";
+import db from "../../../firestore.config";
 
 export default function index() {
   const [isLg] = useMediaQuery("(min-width: 992px)");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const collec = collection(db, "cv");
+        const docs = await getDocs(collec);
+        const documents = docs.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(documents);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data from Firestore:", error.menssage);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -85,7 +106,9 @@ export default function index() {
         </Flex>
       </Flex>
       <Flex justify="center" my={16}>
-        <Button title="DESCARGA MI CV" />
+        {data.map((info, index) => (
+          <Button title="DESCARGA MI CV" href={info.link} />
+        ))}
       </Flex>
       <Skills />
       <Flex justify="center" mt={20}>
