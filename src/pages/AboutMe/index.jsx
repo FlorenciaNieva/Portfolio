@@ -29,6 +29,7 @@ export default function index() {
       <Flex
         direction={{ base: "column", lg: "row" }}
         px={{ base: "42px", sm: "80px" }}
+        pt={{ base: "15vh", sm: "25vh" }}
         justify="space-between"
         align="center"
         pos="relative"
@@ -50,7 +51,9 @@ export default function index() {
           {isLg ? <Accordion /> : ""}
         </Flex>
         <Flex direction="column" w={{ base: "60vw" }}>
-          <Heading textAlign="center">Sobre mí</Heading>
+          <Heading textAlign="center" mb={5}>
+            Sobre mí
+          </Heading>
           <Box
             p={6}
             borderRadius={20}

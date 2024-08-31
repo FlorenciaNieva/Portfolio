@@ -38,7 +38,6 @@ export default function index() {
     };
     fetchData();
   }, []);
-  console.log(data);
 
   return (
     <Flex
@@ -48,6 +47,7 @@ export default function index() {
       align="center"
       zIndex={1}
       pos="relative"
+      pt={32}
     >
       <Heading mb={20}>Mis Proyectos</Heading>
       <Flex justify="center" align="stretch" gap={20} wrap="wrap">

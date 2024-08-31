@@ -63,6 +63,7 @@ export default function index() {
       <Flex
         direction={{ base: "column-reverse", md: "row" }}
         px={{ base: "42px", sm: "80px" }}
+        pt="20vh"
         justify="start"
         align="stretch"
         gap={{ base: 10, md: 40 }}
