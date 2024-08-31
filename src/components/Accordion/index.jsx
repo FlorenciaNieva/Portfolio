@@ -26,8 +26,7 @@ export default function index() {
         <AccordionPanel pb={4}>
           Lo que me apasiona del desarrollo de software es su capacidad para
           mejorar la vida cotidiana de las personas al simplificar y optimizar
-          procesos. Me motiva la idea de crear soluciones que tengan un impacto
-          positivo en las actividades diarias de la gente. También me fascina
+          procesos. Me fascina
           cómo el desarrollo de software y el testing se complementan,
           asegurando que las soluciones no solo sean innovadoras, sino también
           efectivas y confiables.
@@ -67,10 +66,8 @@ export default function index() {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          En mi tiempo libre, disfruto de escuchar música, ver películas y
-          series, y realizar deporte. Estas actividades me ayudan a desconectar.
-          Además, me interesa mucho la capacitación continua, ya que me permite
-          seguir creciendo en mi campo.
+          En mi tiempo libre, disfruto de escuchar música, aprender cosas nuevas, ver películas o
+          series, y realizar deporte.
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
