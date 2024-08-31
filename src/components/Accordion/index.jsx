@@ -4,15 +4,14 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
+  AccordionIcon,
   Box,
-  Image,
   Heading,
 } from "@chakra-ui/react";
-import plus from "../../assets/svg/icons/plus.svg";
 
 export default function index() {
   return (
-    <Accordion allowToggle w={{ base: "60vw", lg: "20vw" }}>
+    <Accordion allowToggle w={{ base: "80vw", lg: "20vw" }}>
       <AccordionItem border="none">
         <h2>
           <AccordionButton bg="primary.200" borderRadius={10}>
@@ -21,7 +20,7 @@ export default function index() {
                 Mis pasiones
               </Heading>
             </Box>
-            <Image src={plus} alt="Icono de más" />
+            <AccordionIcon />
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
@@ -43,7 +42,7 @@ export default function index() {
                 Mi misión
               </Heading>
             </Box>
-            <Image src={plus} alt="Icono de más" />
+            <AccordionIcon />
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
@@ -64,7 +63,7 @@ export default function index() {
                 Mis hobbies
               </Heading>
             </Box>
-            <Image src={plus} alt="Icono de más" />
+            <AccordionIcon />
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>

@@ -43,7 +43,7 @@ export default function index() {
         src={vector}
         alt="vector de fondo"
         pos="absolute"
-        top={{ base: 550, lg: 0 }}
+        top={{ base: 450, lg: 0 }}
         right={0}
         zIndex={0}
       />
@@ -52,7 +52,7 @@ export default function index() {
         px={{ base: "42px", sm: "80px" }}
         pt={{ base: "15vh", sm: "25vh" }}
         justify="space-between"
-        align="center"
+        align={{base:"center", lg:"start"}}
         pos="relative"
         gap={16}
       >
@@ -71,7 +71,7 @@ export default function index() {
           />
           {isLg ? <Accordion /> : ""}
         </Flex>
-        <Flex direction="column" w={{ base: "60vw" }}>
+        <Flex direction="column" w={{ base: "80vw", lg: "60vw" }}>
           <Heading textAlign="center" mb={5}>
             Sobre mí
           </Heading>
