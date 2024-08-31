@@ -22,13 +22,18 @@ export default function index() {
       <Flex
         direction="column"
         px={{ base: "42px", sm: "80px" }}
+        pt="28vh"
         justifyContent="center"
         w={{ base: "100%", md: "60%" }}
         minH="80vh"
         pos="relative"
       >
         <Text fontSize="2xl">Hola, soy</Text>
-        <Heading size={{base:"3xl", md:"2xl"}} fontFamily="Cabinet-Bold" lineHeight="1.2">
+        <Heading
+          size={{ base: "3xl", md: "2xl" }}
+          fontFamily="Cabinet-Bold"
+          lineHeight="1.2"
+        >
           Florencia{" "}
           <span style={{ fontFamily: "Megalona", fontSize: "48px" }}>
             Nieva

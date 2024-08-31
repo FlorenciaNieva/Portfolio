@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Flex } from "@chakra-ui/react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -6,10 +6,17 @@ export default function index({ direction, onClose }) {
   const navigate = useNavigate();
   let location = useLocation();
 
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location.pathname]);
+
   const handleNavigation = (sectionId) => {
     const section = document.getElementById(sectionId);
 
     if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       if (section) {
         window.scrollTo({
           top: section.offsetTop,
@@ -19,6 +26,7 @@ export default function index({ direction, onClose }) {
       onClose();
     } else {
       navigate("/");
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setTimeout(() => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -28,7 +36,7 @@ export default function index({ direction, onClose }) {
           });
         }
         onClose();
-      }, 500);
+      }, 0);
     }
   };
 
@@ -37,7 +45,7 @@ export default function index({ direction, onClose }) {
       <Flex direction={direction} align="center" gap={10}>
         <Link
           onClick={() => {
-            navigate("/");
+            handleNavigation("/");
             onClose();
           }}
           fontFamily="Satoshi-Bold"

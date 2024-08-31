@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Flex, Heading, Image } from "@chakra-ui/react";
 import FormContact from "../../components/FormContact";
 import vector from "../../assets/svg/vectors/vector-contact.svg";
 
@@ -27,6 +20,7 @@ export default function index() {
         align="center"
         pos="relative"
         px={{ base: "42px", sm: "80px" }}
+        pt="20vh"
         gap={3}
       >
         <Heading>Contactame</Heading>
