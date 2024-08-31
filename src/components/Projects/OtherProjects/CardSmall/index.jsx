@@ -13,7 +13,7 @@ export default function index({ id, img, title }) {
       p={5}
       borderRadius="16px"
       gap={5}
-      maxW="18vw"
+      maxW={{base:"55vw", md: "30vw", lg:"18vw"}}
       bg="neutral.100"
       boxShadow=" 0px 6px 6px 0px #00000021, 0px 13px 8px 0px #00000014, 0px 23px 9px 0px #00000005, 0px 36px 10px 0px #00000000, 0px 4px 4px 0px #00000040"
       border="1px solid"

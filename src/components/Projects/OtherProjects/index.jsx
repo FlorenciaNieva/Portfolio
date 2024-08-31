@@ -58,7 +58,7 @@ export default function index({ id }) {
         <Flex borderTop="1px solid" borderColor="neutral.1000" flex="1"></Flex>
       </Flex>
 
-      <Flex justify="center" align="stretch" gap={20} wrap="wrap">
+      <Flex direction={{base: "column", md: "row"}} justify="center" align="stretch" gap={{base: 8, lg: 20}} wrap="wrap">
         {loading ? (
           <div>
             <Spinner
