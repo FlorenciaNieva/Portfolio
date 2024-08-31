@@ -13,7 +13,7 @@ export default function index() {
       <Flex
         direction="column"
         textAlign="center"
-        w={{ base: "60vw", lg: "25vw" }}
+        w={{ base: "80vw", lg: "25vw" }}
         shadow="0px 20px 40px 0px #0000001A"
         borderRadius={20}
         p="40px 25px"
@@ -34,7 +34,7 @@ export default function index() {
       <Flex
         direction="column"
         textAlign="center"
-        w={{ base: "60vw", lg: "25vw" }}
+        w={{ base: "80vw", lg: "25vw" }}
         shadow="0px 20px 40px 0px #0000001A"
         borderRadius={20}
         p="40px 25px"
@@ -46,8 +46,8 @@ export default function index() {
         <Box>
           <Text>
             HTML / CSS / JavaScript / React.js / Responsive Desing / Bootstrap /
-            Tailwind / Bulma / Chakra UI / Styled Components / VSCode / GIT /
-            GitHub / NPM / Netlify / Vercel / GitHub Pages / FireStor / Trello /
+            Tailwind CSS / Bulma / Chakra UI / Styled Components / VSCode / GIT /
+            GitHub / NPM / Netlify / Vercel / GitHub Pages / FireStore / Trello /
             Canva / Figma / Herramientas de microsoft
           </Text>
         </Box>

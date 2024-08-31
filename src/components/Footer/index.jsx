@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Flex, Image, Link, Text } from "@chakra-ui/react";
 import Github from "../../assets/svg/socialMedia/github.svg";
 import Gmail from "../../assets/svg/socialMedia/gmail.svg";
 import Linkedin from "../../assets/svg/socialMedia/linkedin.svg";
@@ -23,7 +15,11 @@ export default function index() {
       gap={5}
     >
       <Flex justify="center" align="center" gap={10}>
-        <Link href="https://github.com/FlorenciaNieva" isExternal>
+        <Link
+          href="https://github.com/FlorenciaNieva"
+          isExternal
+          _hover={{ color: "primary.800", textDecoration: "none" }}
+        >
           <Flex direction="column" alignItems="center">
             <Image
               src={Github}
@@ -36,7 +32,11 @@ export default function index() {
             </Text>
           </Flex>
         </Link>
-        <Link href="https://www.linkedin.com/in/florencianievaa" isExternal>
+        <Link
+          href="https://www.linkedin.com/in/florencianievaa"
+          isExternal
+          _hover={{ color: "primary.800", textDecoration: "none" }}
+        >
           <Flex direction="column" alignItems="center">
             <Image
               src={Linkedin}
@@ -49,7 +49,11 @@ export default function index() {
             </Text>
           </Flex>
         </Link>
-        <Link href="mailto:florencianieva930@gmail.com" isExternal>
+        <Link
+          href="mailto:florencianieva930@gmail.com"
+          isExternal
+          _hover={{ color: "primary.800", textDecoration: "none" }}
+        >
           <Flex direction="column" alignItems="center">
             <Image
               src={Gmail}

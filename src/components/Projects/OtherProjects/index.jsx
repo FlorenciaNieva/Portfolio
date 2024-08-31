@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Flex, Heading, Spinner } from "@chakra-ui/react";
-import Card from "./Card";
+import React, { useEffect, useState } from "react";
+import { Box, Flex, Grid, Image, Text, Spinner } from "@chakra-ui/react";
 import { collection, getDocs } from "firebase/firestore";
-import db from "../../../firestore.config";
-import SafePaws from "../../assets/img/SafePaws.webp";
-import MovieApp from "../../assets/img/MovieApp.webp";
-import Carrers from "../../assets/img/Carrers.webp";
-import AhorrAdas from "../../assets/img/Ahorradas.webp";
-import MemeGenerator from "../../assets/img/MemeGenerate.webp";
+import db from "../../../../firestore.config";
+import Card from "./CardSmall";
+import SafePaws from "../../../assets/img/SafePaws.webp";
+import MovieApp from "../../../assets/img/MovieApp.webp";
+import Carrers from "../../../assets/img/Carrers.webp";
+import AhorrAdas from "../../../assets/img/Ahorradas.webp";
+import MemeGenerator from "../../../assets/img/MemeGenerate.webp";
 
 const imageMap = {
   SafePaws,
@@ -17,7 +17,7 @@ const imageMap = {
   AhorrAdas,
 };
 
-export default function index() {
+export default function index({ id }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -39,18 +39,26 @@ export default function index() {
     fetchData();
   }, []);
 
+  const filteredData = data.filter((info) => info.id !== id).slice(0, 3);
+
   return (
     <Flex
-      id="projects"
       direction="column"
-      justify="space-between"
+      px={{ base: "42px", sm: "80px" }}
+      justify="start"
       align="center"
-      zIndex={1}
-      pos="relative"
-      pt={32}
+      gap={16}
+      mt={16}
     >
-      <Heading mb={20}>Mis Proyectos</Heading>
-      <Flex justify="center" align="stretch" gap={20} wrap="wrap">
+      <Flex justify="center" align="center" w="50vw" gap={5}>
+        <Flex borderTop="1px solid" borderColor="neutral.1000" flex="1"></Flex>
+        <Text fontSize="xl" color="neutral.1000" whiteSpace="nowrap">
+          Mira otros proyectos
+        </Text>
+        <Flex borderTop="1px solid" borderColor="neutral.1000" flex="1"></Flex>
+      </Flex>
+
+      <Flex direction={{base: "column", md: "row"}} justify="center" align="stretch" gap={{base: 8, lg: 20}} wrap="wrap">
         {loading ? (
           <div>
             <Spinner
@@ -62,13 +70,12 @@ export default function index() {
             />
           </div>
         ) : (
-          data.map((info, index) => (
+          filteredData.map((info) => (
             <Card
               key={info?.id}
               id={info?.id}
               img={imageMap[info?.title]}
               title={info?.title}
-              summary={info?.summary}
             />
           ))
         )}
