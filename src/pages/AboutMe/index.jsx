@@ -50,7 +50,7 @@ export default function index() {
       <Flex
         direction={{ base: "column", lg: "row" }}
         px={{ base: "42px", sm: "80px" }}
-        pt={{ base: "15vh", sm: "25vh" }}
+        pt={{ base: "15vh", sm: "25vh", "2xl": "15vh" }}
         justify="space-between"
         align={{ base: "center", lg: "start" }}
         pos="relative"
@@ -71,7 +71,7 @@ export default function index() {
           />
           {isLg ? <Accordion /> : ""}
         </Flex>
-        <Flex direction="column" w={{ base: "80vw", lg: "60vw" }}>
+        <Flex direction="column" w={{ base: "80vw", lg: "60vw", "2xl": "50vw" }}>
           <Heading textAlign="center" mb={5}>
             Sobre mí
           </Heading>

@@ -8,6 +8,7 @@ import MovieApp from "../../assets/img/MovieApp.webp";
 import Carrers from "../../assets/img/Carrers.webp";
 import AhorrAdas from "../../assets/img/Ahorradas.webp";
 import MemeGenerator from "../../assets/img/MemeGenerate.webp";
+import Justina from "../../assets/img/Justina.webp";
 
 const imageMap = {
   SafePaws,
@@ -15,6 +16,7 @@ const imageMap = {
   Carrers,
   MemeGenerator,
   AhorrAdas,
+  Justina,
 };
 
 export default function index() {
@@ -47,10 +49,10 @@ export default function index() {
       align="center"
       zIndex={1}
       pos="relative"
-      pt={32}
+      pt={{base: 32, "2xl": 44}}
     >
       <Heading mb={20}>Mis Proyectos</Heading>
-      <Flex justify="center" align="stretch" gap={20} wrap="wrap">
+      <Flex justify="center" align="stretch" gap={20} wrap="wrap" px={{ base: "42px", sm: "60px", "2xl": "80px" }}>
         {loading ? (
           <div>
             <Spinner
