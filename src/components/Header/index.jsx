@@ -69,7 +69,7 @@ export default function index() {
             width: "100%",
             backgroundColor: scrolled ? "#FaF8F8" : "",
             boxShadow: scrolled
-              ? "#C4A6CF 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 1px 0px 0px"
+              ? "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 1px 0px 0px"
               : "",
             zIndex: "2",
             transition:

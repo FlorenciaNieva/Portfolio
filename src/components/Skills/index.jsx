@@ -24,8 +24,8 @@ export default function index() {
         </Heading>
         <Box>
           <Text>
-            Trabajo en equipo / Autodidacta / Escucha activa / Comunicación
-            efectiva / Gestión del tiempo / Adaptabilidad / Productividad /
+            Trabajo en equipo - Autodidacta - Escucha activa - Comunicación
+            efectiva - Gestión del tiempo - Adaptabilidad - Proactividad -
             Atención al cliente
           </Text>
         </Box>
@@ -45,10 +45,10 @@ export default function index() {
         </Heading>
         <Box>
           <Text>
-            HTML / CSS / JavaScript / React.js / Responsive Desing / Bootstrap /
-            Tailwind CSS / Bulma / Chakra UI / Styled Components / VSCode / GIT /
-            GitHub / NPM / Netlify / Vercel / GitHub Pages / FireStore / Trello /
-            Canva / Figma / Herramientas de microsoft
+            HTML - CSS - JavaScript - React.js - Responsive Desing - Bootstrap -
+            Tailwind CSS - Bulma - Chakra UI - Styled Components - Visual Studio Code - GIT -
+            GitHub - NPM - Netlify - Vercel - GitHub Pages - FireStore - Trello -
+            Canva - Figma - Microsoft 365
           </Text>
         </Box>
       </Flex>
