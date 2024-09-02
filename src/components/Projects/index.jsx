@@ -52,7 +52,7 @@ export default function index() {
       pt={32}
     >
       <Heading mb={20}>Mis Proyectos</Heading>
-      <Flex justify="center" align="stretch" gap={20} wrap="wrap">
+      <Flex justify="center" align="stretch" gap={20} wrap="wrap" px={{ base: "42px", sm: "80px" }}>
         {loading ? (
           <div>
             <Spinner
