@@ -8,6 +8,7 @@ import MovieApp from "../../assets/img/MovieApp.webp";
 import Carrers from "../../assets/img/Carrers.webp";
 import AhorrAdas from "../../assets/img/Ahorradas.webp";
 import MemeGenerator from "../../assets/img/MemeGenerate.webp";
+import Justina from "../../assets/img/Justina.webp";
 
 const imageMap = {
   SafePaws,
@@ -15,6 +16,7 @@ const imageMap = {
   Carrers,
   MemeGenerator,
   AhorrAdas,
+  Justina,
 };
 
 export default function index() {
