@@ -49,7 +49,7 @@ export default function index() {
       align="center"
       zIndex={1}
       pos="relative"
-      pt={32}
+      pt={{base: 32, "2xl": 44}}
     >
       <Heading mb={20}>Mis Proyectos</Heading>
       <Flex justify="center" align="stretch" gap={20} wrap="wrap" px={{ base: "42px", sm: "80px" }}>

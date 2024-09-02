@@ -63,30 +63,30 @@ export default function index() {
   return (
     <>
       <Flex
-        direction={{ base: "column-reverse", md: "row" }}
+        direction={{ base: "column-reverse", lg: "row" }}
         px={{ base: "42px", sm: "80px" }}
-        pt="20vh"
+        pt={{ base: "15vh", sm: "25vh" }}
         justify="start"
         align="stretch"
-        gap={{ base: 10, md: 40 }}
+        gap={{ base: 10, lg: 40 }}
       >
         <Flex
           direction="column"
           justify="space-between"
-          w={{ base: "100%", md: "40%" }}
+          w={{ base: "100%", md: "80%" }}
           gap={2}
         >
           <Flex direction="column" gap={2}>
             <Heading>{data.title}</Heading>
             <Text>{data.description}</Text>
           </Flex>
-          <Flex gap={3}>
+          <Flex gap={{base: 0, lg: 3}} direction={{base: "column", lg: "row"}}>
             <Button title="IR AL PROYECTO" href={data.link} />
             <Button title="IR AL REPOSITORIO" href={data.repo} />
           </Flex>
         </Flex>
 
-        <Box pos="relative" w={{ base: "100%", md: "50%" }}>
+        <Box pos="relative" w={{ base: "100%", lg: "80%" }}>
           <Image
             src={imageMap[data.title]}
             alt="Imagen del proyecto"
