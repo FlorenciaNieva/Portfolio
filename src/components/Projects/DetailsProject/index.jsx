@@ -48,7 +48,7 @@ export default function index() {
 
   if (loading) {
     return (
-      <Flex justify="center" align="center">
+      <Flex justify="center" align="center" pt={{ base: "15vh", sm: "25vh" }}>
         <Spinner
           thickness="4px"
           speed="0.65s"
@@ -80,7 +80,10 @@ export default function index() {
             <Heading>{data.title}</Heading>
             <Text>{data.description}</Text>
           </Flex>
-          <Flex gap={{base: 0, lg: 3}} direction={{base: "column", lg: "row"}}>
+          <Flex
+            gap={{ base: 0, lg: 3 }}
+            direction={{ base: "column", lg: "row" }}
+          >
             <Button title="IR AL PROYECTO" href={data.link} />
             <Button title="IR AL REPOSITORIO" href={data.repo} />
           </Flex>
