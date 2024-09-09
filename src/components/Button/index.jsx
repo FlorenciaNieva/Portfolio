@@ -1,12 +1,13 @@
 import React from "react";
-import { Button, Link, Image } from "@chakra-ui/react";
+import { Box, Button, Link, Image } from "@chakra-ui/react";
 import arrow from "../../assets/svg/icons/arrowOutward.svg";
 
 export default function index({ onClick, title, href }) {
   return (
+    <Box>
     <Link onClick={onClick} href={href} target="_blank">
       <Button
-        mt={6}
+        
         bg="black"
         color="white"
         borderRadius="8px"
@@ -28,6 +29,6 @@ export default function index({ onClick, title, href }) {
           title="Flecha"
         />
       </Button>
-    </Link>
+    </Link></Box>
   );
 }
