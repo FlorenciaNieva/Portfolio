@@ -106,7 +106,7 @@ export default function index() {
         </Flex>
       </Flex>
       <Flex justify="center" my={16}>
-        {data.map((info, index) => (
+        {data.map((info) => (
           <Button title="DESCARGA MI CV" href={info.link} />
         ))}
       </Flex>
