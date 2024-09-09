@@ -81,22 +81,26 @@ export default function index() {
             <Text>{data.description}</Text>
           </Flex>
           <Flex
-            gap={{ base: 0, lg: 3 }}
-            direction={{ base: "column", lg: "row" }}
+          mt={6}
+            gap={3}
+            direction={{ base: "column", sm: "row" }}
           >
             <Button title="IR AL PROYECTO" href={data.link} />
             <Button title="IR AL REPOSITORIO" href={data.repo} />
           </Flex>
         </Flex>
 
-        <Box pos="relative" w={{ base: "100%", lg: "80%" }}>
+        <Box
+          pos="relative"
+          w={{ base: "100%", lg: "80%" }}
+          m="auto"
+          mt={{ base: 10, sm: 0 }}>
           <Image
             src={imageMap[data.title]}
             alt="Imagen del proyecto"
             aria-label="Imagen del proyecto"
             objectFit="cover"
             maxW="100%"
-            h="100%"
             borderRadius="20px"
           />
           <Box
@@ -116,7 +120,8 @@ export default function index() {
         justify="center"
         align="center"
         mx={{ base: "42px", sm: "80px" }}
-        p={10}
+        py={10}
+        px={{ base: 0, md: 10 }}
         mt={10}
       >
         <Text w="48%" textAlign="center">

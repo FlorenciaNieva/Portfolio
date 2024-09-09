@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import vector from "../../assets/svg/vectors/vector-home.svg";
 import Projects from "../../components/Projects";
 import { useNavigate } from "react-router-dom";
@@ -50,9 +50,9 @@ export default function index() {
           habilidades para crear soluciones tecnológicas que cambien la vida
           diaria de las personas.
         </Text>
-        <div>
-          <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
-        </div>
+        <Box mt={6}>
+        <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
+        </Box>
       </Flex>
       <Projects />
     </>
