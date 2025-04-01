@@ -71,7 +71,10 @@ export default function index() {
           />
           {isLg ? <Accordion /> : ""}
         </Flex>
-        <Flex direction="column" w={{ base: "80vw", lg: "60vw", "2xl": "50vw" }}>
+        <Flex
+          direction="column"
+          w={{ base: "80vw", lg: "60vw", "2xl": "50vw" }}
+        >
           <Heading textAlign="center" mb={5}>
             Sobre mí
           </Heading>
@@ -82,25 +85,24 @@ export default function index() {
             backdropFilter="blur(5px)"
           >
             <Text>
-              Hola, me llamo Flor, tengo 19 años y me encanta la tecnología.
-              Estoy muy interesada en el desarrollo de software accesible y en
-              la implementación de soluciones innovadoras para mejorar la
-              experiencia del usuario. Me caracterizo por ser responsable,
-              autodidacta y proactiva.
+              ¡Hola! soy Florencia Nieva
               <br />
               <br />
-              En 2023, me enfoqué en el desarrollo Front-End y terminé la
-              capacitación en febrero de 2024. Posteriormente, participé en una
-              simulación laboral en NoCountry como desarrolladora Front-End,
-              donde interactué con roles interdisciplinarios y desarrollé mis
-              habilidades blandas.
+              Actualmente, soy <strong>Junior Software Engineer</strong> en NTT
+              DATA desde noviembre de 2024, donde me encuentro trabajando en
+              proyectos que me permiten aprender y crecer profesionalmente.
               <br />
               <br />
-              Gracias a una beca, cursé Testing Máster en la UTN y lo completé
-              en agosto de este año. Actualmente, me encuentro cursando la
-              Tecnicatura Universitaria en Tecnologías de la Información en UTN
-              FRAV para seguir expandiendo mis conocimientos. Además, estudio
-              inglés en un instituto desde hace 2 años.
+              Me encuentro cursando la{" "}
+              <strong>Tecnicatura en Tecnologías de la Información</strong> en
+              la Universidad Tecnológica Nacional y tengo el honor de haber sido elegida en distintas becas de
+              fundaciones que me motivan a seguir estudiando y crecer tanto
+              personal como profesionalmente gracias a mi compromiso y
+              dedicación.
+              <br />
+              <br />
+              Mi mayor motivación es desarrollar software que impacte en la vida
+              diaria de las personas y que sea accesible para todos.
             </Text>
           </Box>
         </Flex>

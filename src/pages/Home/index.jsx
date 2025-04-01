@@ -40,18 +40,17 @@ export default function index() {
           </span>
         </Heading>
         <Text fontSize="xl" fontFamily="Satoshi-Bold">
-          Desarrolladora Frontend y QA Tester
+          Junior Software Engineer
         </Text>
         <Text mt={4}>
-          ¡Hola! Soy Flor, Desarrolladora Front-End junior y QA Tester junior.
-          Me apasiona desarrollar softwares que impacten la vida diaria de las
-          personas, facilitando los procesos diarios de una manera accesible
-          para todos. Estoy comprometida a aprender y aplicar continuamente mis
-          habilidades para crear soluciones tecnológicas que cambien la vida
-          diaria de las personas.
+          ¡Hola! Soy Flor, Junior Software Engineer y estudiante de la
+          Tecnicatura en Tecnologías de la Información. Mi objetivo es
+          desarrollar software que facilite los procesos diarios de las
+          personas. Estoy comprometida a ampliar continuamente mis habilidades
+          para crear soluciones tecnológicas.
         </Text>
         <Box mt={6}>
-        <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
+          <Button onClick={() => navigate("/about-me")} title="SOBRE MÍ" />
         </Box>
       </Flex>
       <Projects />
