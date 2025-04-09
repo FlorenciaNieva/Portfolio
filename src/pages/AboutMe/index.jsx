@@ -7,7 +7,7 @@ import {
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import profile from "../../assets/img/profile.webp";
+import profile from "../../assets/img/perfil.webp";
 import vector from "../../assets/svg/vectors/vector-about-me.svg";
 import Accordion from "../../components/Accordion";
 import Skills from "../../components/Skills";
@@ -68,6 +68,7 @@ export default function index() {
             alt="Imagen de perfil"
             aria-label="Imagen de perfil"
             w="100%"
+            style={{ borderRadius: '50%' }}
           />
           {isLg ? <Accordion /> : ""}
         </Flex>
